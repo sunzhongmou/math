@@ -14,14 +14,26 @@ function getQuestions(questionType) {
 }
 
 function getAddSubWithinTenQuestions() {
-    let elements = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let target = getCombination(elements).filter(ele => ele.first + ele.last < 10);
-    let randomTarget = [];
-    for (let i = 0; i < 50 - target.length; i++) {
-        randomTarget = randomTarget.concat(randomPickElement(target))
-    }
+    let elements = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let add = getCombination(elements).filter(ele => ele.first + ele.last <= 10);
+    let sub = getReduceCombination(elements.reverse());
     
-    return shuffle(target.concat(randomTarget).map(ele => ele.first + " + " + ele.last + " = "))
+    let target = shuffle([].concat(add).concat(sub)).slice(1, 51);
+    target[49].hiddenFirst = Math.random() >= 0.5;
+    target[48].hiddenFirst = Math.random() >= 0.5;
+    target[47].hiddenFirst = Math.random() >= 0.5;
+    target[46].hiddenFirst = Math.random() >= 0.5;
+    
+    return target.map((ele, index) => {
+      if (index > 45) {
+        if (ele.hiddenFirst){
+          return  "__ " + ele.symbol + " " + ele.last + " = " + ele.total
+        } else {
+          return  ele.first + " " + ele.symbol + " __" + " = " + ele.total
+        }
+      }
+      return ele.first + " " + ele.symbol + " " + ele.last + " = "
+    });
 }
 
 function shuffle(a) {
@@ -40,6 +52,20 @@ function randomPickElement(elements) {
 function getCombination(elements) {
     return  elements.reduce((previousValue, currentValue) => 
         previousValue.concat(elements.map(
-          f => {return {"first": currentValue, "last": f}})),
+          f => {return {
+            "first": currentValue, 
+            "last": f,
+            "symbol": "+",
+            "total": currentValue + f}})),
       []);
+}
+
+function getReduceCombination(element) {
+  return [].concat(...element.map(
+    (v, i) => element.slice(i+1).map( w => {return {
+      "first": v, 
+      "last": w,
+      "symbol": "-",
+      "total": v - w}}))
+  );
 }
