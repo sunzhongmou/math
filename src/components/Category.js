@@ -1,5 +1,5 @@
 import React from 'react';
-import { ADD_SUB_WITHIN_TEN } from '../helper';
+import {ADD_SUB_WITHIN_TEN, ADD_WITHIN_TEN, ADD_WITHIN_TEN_FILL, SUB_WITHIN_TEN, SUB_WITHIN_TEN_FILL} from '../helper';
 
 class Category extends React.Component {
   constructor(props) {
@@ -32,6 +32,46 @@ class Category extends React.Component {
               data-name={ADD_SUB_WITHIN_TEN}
             >
               10以内加减法
+            </span>
+          </li>
+          <li>
+            <span
+              className="muted-link filter-item py-2 mb-0"
+              data-ga-click="Category, text:ADD_SUB_WITHIN_TEN"
+              onClick={this.handleClick}
+              data-name={ADD_WITHIN_TEN}
+            >
+              10以内加法
+            </span>
+          </li>
+          <li>
+            <span
+              className="muted-link filter-item py-2 mb-0"
+              data-ga-click="Category, text:ADD_SUB_WITHIN_TEN"
+              onClick={this.handleClick}
+              data-name={ADD_WITHIN_TEN_FILL}
+            >
+              10以内加法填空
+            </span>
+          </li>
+          <li>
+            <span
+              className="muted-link filter-item py-2 mb-0"
+              data-ga-click="Category, text:ADD_SUB_WITHIN_TEN"
+              onClick={this.handleClick}
+              data-name={SUB_WITHIN_TEN}
+            >
+              10以内减法
+            </span>
+          </li>
+          <li>
+            <span
+              className="muted-link filter-item py-2 mb-0"
+              data-ga-click="Category, text:ADD_SUB_WITHIN_TEN"
+              onClick={this.handleClick}
+              data-name={SUB_WITHIN_TEN_FILL}
+            >
+              10以内减法填空
             </span>
           </li>
         </ul>
