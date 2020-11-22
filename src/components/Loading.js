@@ -4,8 +4,7 @@ import styled from 'styled-components';
 const Animation = styled.span.attrs({
   type: 'text',
   className: 'AnimatedEllipsis',
-})`
-`;
+})``;
 
 const Loading = styled.div`
   width: 100%;
@@ -19,7 +18,7 @@ export default () => (
   <Loading>
     <h2>
       <span>加载中</span>
-      <Animation/>
+      <Animation />
     </h2>
   </Loading>
 );

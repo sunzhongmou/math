@@ -4,6 +4,7 @@
   "description": "Math component for micro frontend ",
   "main": "src/index.js",
   "scripts": {
+    "format": "prettier --write src",
     "test": "react-app-rewired test --watchAll=false",
     "start": "PORT=4101 react-app-rewired start",
     "build": "react-app-rewired build"
@@ -41,9 +42,14 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "jest-enzyme": "^7.1.2",
     "jest-fetch-mock": "^3.0.3",
+    "prettier": "^2.0.5",
     "react-app-rewired": "^2.1.6"
   },
   "config-overrides-path": "node_modules/react-app-rewire-micro-frontends",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
