@@ -6,7 +6,7 @@ const Animation = styled.span.attrs({
   className: 'AnimatedEllipsis',
 })``;
 
-const Loading = styled.div`
+const Load = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -14,11 +14,13 @@ const Loading = styled.div`
   align-items: center;
 `;
 
-export default () => (
-  <Loading>
+const Loading = () => (
+  <Load>
     <h2>
       <span>加载中</span>
       <Animation />
     </h2>
-  </Loading>
+  </Load>
 );
+
+export default Loading
