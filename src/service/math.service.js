@@ -1,4 +1,10 @@
-import {ADD_SUB_WITHIN_TEN, ADD_WITHIN_TEN, ADD_WITHIN_TEN_FILL, SUB_WITHIN_TEN, SUB_WITHIN_TEN_FILL} from '../helper';
+import {
+  ADD_SUB_WITHIN_TEN,
+  ADD_WITHIN_TEN,
+  ADD_WITHIN_TEN_FILL,
+  SUB_WITHIN_TEN,
+  SUB_WITHIN_TEN_FILL,
+} from '../helper';
 import { MathematicsBuilder } from '@sunzhongmou/math/lib/mathematics.builder';
 
 export const userService = {
@@ -7,7 +13,7 @@ export const userService = {
 
 function getQuestions(questionType) {
   let questions = [];
-  
+
   switch (questionType) {
     case ADD_SUB_WITHIN_TEN:
       questions = getAddSubWithinTenQuestions();

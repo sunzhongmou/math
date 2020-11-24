@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import QuestionCard from './QuestionCard';
 
 const CardContainer = styled.div.attrs({
   className: 'container-lg clearfix',
@@ -8,18 +9,11 @@ const CardContainer = styled.div.attrs({
   flex-wrap: wrap;
 `;
 
-const Card = styled.div.attrs({
-  className: 'col-2 float-left border p-3',
-})`
-  font-size: 21px;
-  width: 20%;
-`;
-
 const QuestionList = ({ questions }) => {
   return (
     <CardContainer>
       {questions.map((question, index) => (
-        <Card key={index}>{question}</Card>
+        <QuestionCard key={index} question={question} />
       ))}
     </CardContainer>
   );

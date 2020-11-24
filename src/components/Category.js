@@ -1,5 +1,11 @@
 import React from 'react';
-import {ADD_SUB_WITHIN_TEN, ADD_WITHIN_TEN, ADD_WITHIN_TEN_FILL, SUB_WITHIN_TEN, SUB_WITHIN_TEN_FILL} from '../helper';
+import {
+  ADD_SUB_WITHIN_TEN,
+  ADD_WITHIN_TEN,
+  ADD_WITHIN_TEN_FILL,
+  SUB_WITHIN_TEN,
+  SUB_WITHIN_TEN_FILL,
+} from '../helper';
 
 class Category extends React.Component {
   constructor(props) {

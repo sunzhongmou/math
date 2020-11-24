@@ -28,6 +28,7 @@
   "dependencies": {
     "@sunzhongmou/math": "^0.1.0",
     "history": "^5.0.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-app-polyfill": "^2.0.0",
     "react-app-rewire-micro-frontends": "^0.0.1",
@@ -49,6 +50,9 @@
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
