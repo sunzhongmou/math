@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Loading from './components/Loading';
 import Category from './components/Category';
 import QuestionList from './components/QuestionList';
-import { ADD_SUB_WITHIN_TEN } from './helper';
+import {ADD_SUB_WITHIN_TWENTY} from './helper';
 import { userService } from './service/math.service';
 
 const MainColumn = styled.div.attrs({
@@ -21,7 +21,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: ADD_SUB_WITHIN_TEN,
+      category: ADD_SUB_WITHIN_TWENTY,
       questions: [],
       loading: true,
     };
