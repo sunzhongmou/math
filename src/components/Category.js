@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  ADD_SUB_WITHIN_TEN, ADD_SUB_WITHIN_TWENTY,
-  ADD_WITHIN_TEN,
+  ADD_SUB_WITHIN_TEN, ADD_SUB_WITHIN_TWENTY, ADD_SUB_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN,
+  ADD_WITHIN_TEN, ADD_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN,
   ADD_WITHIN_TEN_FILL, ADD_WITHIN_TWENTY, ADD_WITHIN_TWENTY_FILL,
   SUB_WITHIN_TEN,
   SUB_WITHIN_TEN_FILL, SUB_WITHIN_TWENTY, SUB_WITHIN_TWENTY_FILL,
@@ -33,7 +33,27 @@ class Category extends React.Component {
           <li>
             <span
               className="muted-link filter-item py-2 mb-0"
-              data-ga-click="Category, text:ADD_SUB_WITHIN_TEN"
+              data-ga-click="Category, text:ADD_SUB_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN"
+              onClick={this.handleClick}
+              data-name={ADD_SUB_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN}
+            >
+              20以内加减法(10)
+            </span>
+          </li>
+          <li>
+            <span
+              className="muted-link filter-item py-2 mb-0"
+              data-ga-click="Category, text:ADD_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN"
+              onClick={this.handleClick}
+              data-name={ADD_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN}
+            >
+              20以内加法(10)
+            </span>
+          </li>
+          <li>
+            <span
+              className="muted-link filter-item py-2 mb-0"
+              data-ga-click="Category, text:ADD_SUB_WITHIN_TWENTY"
               onClick={this.handleClick}
               data-name={ADD_SUB_WITHIN_TWENTY}
             >

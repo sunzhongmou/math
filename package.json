@@ -26,7 +26,7 @@
   },
   "homepage": "https://math.sunzhongmou.com",
   "dependencies": {
-    "@sunzhongmou/math": "^0.2.0",
+    "@sunzhongmou/math": "^0.2.1",
     "history": "^5.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",

@@ -1528,10 +1528,10 @@
   resolved "https://registry.yarnpkg.com/@sunzhongmou/design-pattern/-/design-pattern-0.0.1.tgz#5a1492675a117bc61e1f49f104407c4536db88c2"
   integrity sha512-7w1Z7CeYXtnTdn1vUyrReJRQ9VLkKN6o+TJbqHI5fnfX78i/T+cacrFA16KPQ0PwzUqcvI2sJs67UqModTHzqQ==
 
-"@sunzhongmou/math@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@sunzhongmou/math/-/math-0.2.0.tgz#3631c603e8db28f0bd8672625a3c013b7ce876eb"
-  integrity sha512-SUev8UNWmDyUvjKG8gBgqeSB6tmBAMQKfR7uHlE+TZvyJoBFK+GR4yeIPF1V192ZYqMPUMBUvofVNLgFWmKulQ==
+"@sunzhongmou/math@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@sunzhongmou/math/-/math-0.2.1.tgz#e481c99dcadd6607e575e64e78fa59e8b089831d"
+  integrity sha512-CDTw0qXr3I0qIUc9KGFDCpZJLSDKsqgyWKduKZ9ZrlSSRtn1nEUlK/+pIVmYkoMSockcJs9iD0JgQlvSvufNqg==
   dependencies:
     "@sunzhongmou/ddd" "0.0.1"
     "@sunzhongmou/design-pattern" "0.0.1"

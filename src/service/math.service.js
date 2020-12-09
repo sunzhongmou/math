@@ -6,6 +6,7 @@ import {
   SUB_WITHIN_TEN_FILL, SUB_WITHIN_TWENTY, SUB_WITHIN_TWENTY_FILL,
 } from '../helper';
 import { MathematicsBuilder } from '@sunzhongmou/math/lib/mathematics.builder';
+import {ADD_SUB_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN, ADD_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN} from "../helper/constants";
 
 export const userService = {
   getQuestions,
@@ -44,6 +45,12 @@ function getQuestions(questionType) {
       break;
     case SUB_WITHIN_TWENTY_FILL:
       questions = getSubFillWithinTwentyQuestions();
+      break;
+    case ADD_SUB_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN:
+      questions = getAddSubWithinTwentyWithOperandsInTenQuestions();
+      break;
+    case ADD_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN:
+      questions = getAddWithinTwentyWithOperandsInTenQuestions();
       break;
     default:
       questions = getAddSubWithinTenQuestions();
@@ -108,5 +115,17 @@ function getSubWithinTwentyQuestions() {
 function getSubFillWithinTwentyQuestions() {
   const builder = new MathematicsBuilder();
   const mathematics = builder.withMaximum(20).withAdd(0).withSub(50).withFill(50).build();
+  return mathematics.generate();
+}
+
+function getAddSubWithinTwentyWithOperandsInTenQuestions() {
+  const builder = new MathematicsBuilder();
+  const mathematics = builder.withMaximum(20).withAdd(25).withSub(25).withFill(4).withOperandsInTen().build();
+  return mathematics.generate();
+}
+
+function getAddWithinTwentyWithOperandsInTenQuestions() {
+  const builder = new MathematicsBuilder();
+  const mathematics = builder.withMaximum(20).withAdd(50).withSub(0).withFill(0).withOperandsInTen().build();
   return mathematics.generate();
 }
