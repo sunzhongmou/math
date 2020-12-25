@@ -9,3 +9,5 @@ export const ADD_WITHIN_TWENTY = 'add_within_twenty';
 export const ADD_WITHIN_TWENTY_FILL = 'add_within_twenty_fill';
 export const SUB_WITHIN_TWENTY = 'sub_within_twenty';
 export const SUB_WITHIN_TWENTY_FILL = 'sub_within_twenty_fill';
+export const ADD_SUB_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN = 'add_sub_within_twenty_with_operands_in_ten';
+export const ADD_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN = 'add_within_twenty_with_operands_in_ten';
