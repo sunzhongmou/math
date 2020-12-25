@@ -1,4 +1,5 @@
 import {
+  ADD_LOOP_WITHIN_TWENTY,
   ADD_SUB_WITHIN_TEN, ADD_SUB_WITHIN_TWENTY,
   ADD_WITHIN_TEN,
   ADD_WITHIN_TEN_FILL, ADD_WITHIN_TWENTY, ADD_WITHIN_TWENTY_FILL,
@@ -15,6 +16,9 @@ function getQuestions(questionType) {
   let questions = [];
 
   switch (questionType) {
+    case ADD_LOOP_WITHIN_TWENTY:
+      questions = getAddLoopWithinTwentyQuestions();
+      break;
     case ADD_SUB_WITHIN_TEN:
       questions = getAddSubWithinTenQuestions();
       break;
@@ -108,5 +112,11 @@ function getSubWithinTwentyQuestions() {
 function getSubFillWithinTwentyQuestions() {
   const builder = new MathematicsBuilder();
   const mathematics = builder.withMaximum(20).withAdd(0).withSub(50).withFill(50).build();
+  return mathematics.generate();
+}
+
+function getAddLoopWithinTwentyQuestions() {
+  const builder = new MathematicsBuilder();
+  const mathematics = builder.withLoopAdd().withOperandsInTen().withMaximum(20).withAdd(50).withSub(0).withFill(0).build();
   return mathematics.generate();
 }
