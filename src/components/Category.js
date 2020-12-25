@@ -44,7 +44,6 @@ class Category extends React.Component {
           <li>
             <span
               className="muted-link filter-item py-2 mb-0"
-              data-ga-click="Category, text:ADD_SUB_WITHIN_TEN"
               data-ga-click="Category, text:ADD_SUB_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN"
               onClick={this.handleClick}
               data-name={ADD_SUB_WITHIN_TWENTY_WITH_OPERANDS_IN_TEN}
